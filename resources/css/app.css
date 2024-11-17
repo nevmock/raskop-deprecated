@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+[x-cloak]{
+    display: none;
+}
+
+select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
+
+.loader {
+        border-top-color: #3498db;
+        -webkit-animation: spinner 1s linear infinite;
+        animation: spinner 1s linear infinite;
+    }
+
+    @-webkit-keyframes spinner {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+}
